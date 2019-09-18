@@ -1,0 +1,26 @@
+
+---
+server:
+  port: 8762
+spring:
+  # 节点3的标签
+  profiles: client1
+  application:
+    name: service-hi
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+---
+server:
+  port: 8763
+spring:
+  # 节点3的标签
+  profiles: client2
+  application:
+    name: service-hi
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
